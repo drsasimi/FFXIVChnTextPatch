@@ -71,7 +71,7 @@ public class ReplaceEXDF {
 		// 根据传入的文件进行遍历
         int fileCount = 0;
 		for (String replaceFile : fileList) {
-			percentPanel.percentShow((double)(++fileCount) / (double)fileList.size());
+			//percentPanel.percentShow((double)(++fileCount) / (double)fileList.size());
 			if (replaceFile.toUpperCase().endsWith(".EXH")) {
 				System.out.println("Now File : " + replaceFile);
 				// 准备好文件目录名和文件名
@@ -131,7 +131,7 @@ public class ReplaceEXDF {
 						boolean cnEXDFileAvailable = true;
 						if (cnEXHFileAvailable){
 							try{
-								Integer exdFileCRCCN = FFCRC.ComputeCRC((fileName.replace(".EXH", "_" + String.valueOf(exdfPage.pageNum) + "_CHS.EXD")).toLowerCase().getBytes());
+								Integer exdFileCRCCN = FFCRC.ComputeCRC((fileName.replace(".EXH", "_" + String.valueOf(exdfPage.pageNum) + "_KO.EXD")).toLowerCase().getBytes());
 								SqPackIndexFile exdIndexFileCN = indexCN.get(filePatchCRC).getFiles().get(exdFileCRCCN);
 								byte[] exdFileCN = extractFile(pathToIndexCN, exdIndexFileCN.getOffset());
 								EXDFFile chs_exd = new EXDFFile(exdFileCN);

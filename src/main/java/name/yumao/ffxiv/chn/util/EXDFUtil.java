@@ -50,7 +50,7 @@ public class EXDFUtil {
             // 根据头文件 轮询资源文件
             for (EXDFPage exdfPage : exhSE.getPages()) {
                 // 获取资源文件的CRC
-                Integer exdFileCRCJA = FFCRC.ComputeCRC((fileName.replace(".EXH", "_" + String.valueOf(exdfPage.pageNum) + "_CHS.EXD")).toLowerCase().getBytes());
+                Integer exdFileCRCJA = FFCRC.ComputeCRC((fileName.replace(".EXH", "_" + String.valueOf(exdfPage.pageNum) + "_KO.EXD")).toLowerCase().getBytes());
                 // 提取对应的文本文件
                 SqPackIndexFile exdIndexFileJA = indexSE.get(filePatchCRC).getFiles().get(exdFileCRCJA);
                 byte[] exdFileJA = null;
@@ -197,7 +197,7 @@ public class EXDFUtil {
             // 根据头文件 轮询资源文件
             for (EXDFPage exdfPage : exhSE.getPages()) {
                 // 获取资源文件的CRC
-                Integer exdFileCRCJA = FFCRC.ComputeCRC((fileName.replace(".EXH", "_" + String.valueOf(exdfPage.pageNum) + "_CHS.EXD")).toLowerCase().getBytes());
+                Integer exdFileCRCJA = FFCRC.ComputeCRC((fileName.replace(".EXH", "_" + String.valueOf(exdfPage.pageNum) + "_KO.EXD")).toLowerCase().getBytes());
                 // 提取对应的文本文件
                 SqPackIndexFile exdIndexFileJA = indexSE.get(filePatchCRC).getFiles().get(exdFileCRCJA);
                 byte[] exdFileJA = null;
@@ -371,7 +371,7 @@ public class EXDFUtil {
                 for (EXDFPage exdfPage : exhSE.getPages()) {
                     // 获取资源文件的CRC
                     Integer exdFileCRCJA = FFCRC.ComputeCRC((fileName.replace(".EXH", "_" + String.valueOf(exdfPage.pageNum) + "_" + lang + ".EXD")).toLowerCase().getBytes());
-                    Integer exdFileCRCCN = FFCRC.ComputeCRC((fileName.replace(".EXH", "_" + String.valueOf(exdfPage.pageNum) + "_CHS.EXD")).toLowerCase().getBytes());
+                    Integer exdFileCRCCN = FFCRC.ComputeCRC((fileName.replace(".EXH", "_" + String.valueOf(exdfPage.pageNum) + "_KO.EXD")).toLowerCase().getBytes());
                     // 提取对应的文本文件
                     SqPackIndexFile exdIndexFileJA = indexSE.get(filePatchCRC).getFiles().get(exdFileCRCJA);
                     SqPackIndexFile exdIndexFileCN = indexCN.get(filePatchCRC).getFiles().get(exdFileCRCCN);
